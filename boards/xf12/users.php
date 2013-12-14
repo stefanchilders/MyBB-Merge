@@ -30,7 +30,6 @@ class XF12_Converter_Module_Users extends Converter_Module_Users {
 		global $import_session;
 		
 		// Get Members
-		//$query = $this->old_db->simple_select("user", "*", "", array('order_by' => 'user_id', 'order_dir' => 'asc', 'limit_start' => $this->trackers['start_users'], 'limit' => $import_session['users_per_screen']));
 		$query = $this->old_db->query("
 				SELECT u.user_id,
 				u.username as username,
