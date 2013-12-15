@@ -44,6 +44,7 @@ class XF12_Converter extends Converter {
 	var $modules = array("db_configuration" => array("name" => "Database Configuration", "dependencies" => ""),
 						 "import_users" => array("name" => "Users", "dependencies" => "db_configuration"),
 						 "import_usergroups" => array("name" => "Usergroups", "dependencies" => "db_configuration,import_users"),
+						 "import_forums" => array("name" => "Forums", "dependencies" => "db_configuration,import_users"),
 						);
 	
 	/**

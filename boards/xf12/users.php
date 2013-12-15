@@ -47,7 +47,7 @@ class XF12_Converter_Module_Users extends Converter_Module_Users {
 				left join xf_ip i on u.user_id = i.user_id AND action='register'
 				left join xf_user_authenticate a on a.user_id = u.user_id
 				left join xf_user_profile p on p.user_id = u.user_id
-				group by u.user_id
+				order by u.user_id asc
 				limit ".$this->trackers['start_users'].",".$import_session['users_per_screen']."
 				");
 		while($user = $this->old_db->fetch_array($query))
